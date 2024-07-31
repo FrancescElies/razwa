@@ -1,0 +1,19 @@
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[package]
+name = "azwatch"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75.0"
+
+[dependencies]
+azure_core = { version = "0.18", default-features = true }
+azure_identity = "0.18"
+tokio = { version = "1.0", features = ["full"] }
+anyhow = "1"
+log = "0.4"
+env_logger = "0.10"
+async-trait = "0.1"
+azure_devops_rust_api = { version = "0.15.2", features = ["git", "pipelines", "build", "work", "search", "distributed_task"] }
+time = "0.3"
+clap = { version = "4.5.1", features = ["derive"] }
